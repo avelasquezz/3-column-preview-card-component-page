@@ -1,0 +1,159 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/* Global variables */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* Reset styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--very-light-gray);
+  font-weight: 400;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Main */
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Columns container */
+section {
+  display: flex;
+  width: 53rem;
+  height: auto;
+}
+
+/* Column */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  padding: 2.6rem;
+}
+
+img {
+  width: 4rem;
+  height: 2.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--very-light-gray);
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--transparent-white);
+}
+
+button {
+  width: 8.5rem;
+  border: none;
+  padding: 0.8rem 0;
+  border-radius: 25px;
+  margin-top: 3rem;
+  font-weight: inherit;
+  font-family: inherit;
+  background-color: var(--very-light-gray);
+  transition: background-color 0.2s, color 0.1s;
+}
+
+/* Button text color */
+.sedans button {
+  color: var(--bright-orange)
+}
+
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+
+/* Columns background color */
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+/* Active states */
+button:hover, button:focus {
+  color: var(--very-light-gray);
+  background-color: inherit;
+  outline: solid 2px var(--very-light-gray);
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media screen and (max-width: 890px) {
+  section {
+    width: 40rem;
+  }
+
+  .column {
+    padding: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  body {
+    height: auto;
+  }
+
+  section {
+    width: 90%;
+    flex-direction: column;
+    margin: 100px 0;
+  }
+
+  .column {
+    padding: 2.3rem;
+  }
+
+  .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    margin: 0;
+  }
+}
